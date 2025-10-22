@@ -286,7 +286,7 @@ padding: 20px;
 }
 .first .right 
 {
-  height: 30vh;
+  height: 40svh;
 }
 nav 
 {
@@ -306,5 +306,8 @@ nav
   font-size: 25px;
 }
 
+.first .left 
+{
 
+}
 }
