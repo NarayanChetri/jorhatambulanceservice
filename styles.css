@@ -183,6 +183,7 @@ gap: 30px;
 }
 .serviceBox
 {
+  text-align: center;
   width: 300px;
   background: #e8f1fa;
   height: 300px;
