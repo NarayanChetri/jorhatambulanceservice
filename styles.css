@@ -274,8 +274,10 @@ nav a:hover {
 /* ======================================== */
 /* 5. Footer */
 /* ======================================== */
-.simple-credit-footer {
-   
+footer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -286,10 +288,14 @@ nav a:hover {
     font-size: 0.75rem;
     color: #777;
     font-family: Arial, sans-serif;
-    margin-top: 2rem;
+    margin-top: 50px;
 }
-
-.simple-credit-footer a {
+footer h4
+{
+    margin: 0px 10px;
+    font-weight: 200; 
+}
+footer a {
     color: #555;
     text-decoration: none;
 }
