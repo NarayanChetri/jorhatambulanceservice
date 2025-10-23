@@ -1,382 +1,703 @@
 *
+
 {
+
     margin: 0;
+
     padding: 0;
+
    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
    
+
 }
 
-body 
+
+
+body
+
 {
+position: relative;
     background: #ffff;
+
     min-height: 200svh;
+
 }
-nav 
+
+nav
+
 {
+
     display: flex;
+
     flex-direction: row;
-    justify-content: center;
+
+    justify-content: right;
+
     padding: 10px;
+
     align-items: center;
+
+
+
 }
 nav a 
 {
   text-decoration: none;
-  font-weight: bold;
-  margin:0px 30px;
-border-bottom: 2px solid rgba(0, 0, 255, 0.411);
-  padding: 10px;
+  margin: 0px 30px;
+  font-weight: 500;
+  transition: 0.2s ease;
 }
-.a h2
+nav a:hover
 {
-    color: #0cc8fd;
+  color: red;
 }
+
+
 .first
+
 {
+
     height: 70svh;
+
     display: flex;
+
     justify-content:right;
+
     align-items: center;
+
      
+
 }
+
 .first .left
+
 {
+
      
+
     text-align: center;
+
     height: 80%;
+
     width: 400px;
+
     padding: 20px;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
    margin-right: 100px;
 
 
+
+
+
 }
+
 .left h3
+
 {
-    color: #31c5fe;
+
+    color: #fe3131;
+
 }
+
+
 
 .left h5
+
 {
+
     margin-top: 10px;
+
     color: #707082;
+
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     font-size: 17px;
+
     width: 100%;
-}
-.first .right
-{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
 
 }
+
+.first .right
+
+{
+
+    height: 100%;
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content:center;
+
+    align-items: center;
+
+
+
+}
+
+
 
 #book
+
 {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     text-decoration: none;
+
     background: #ea0245;
+
     color: white;
+
     width: 100%;
+
     height: 35px;
+
     padding: 5px;
+
     border-radius: 10px;
+
     margin-top: 10px;
-    transition: 0.2s ease;
+
 }
-#book:hover
-{
-  letter-spacing: 5px;
-  background: #0c74fd;
-}
+
 #call
+
 {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     text-decoration: none;
+
     border: 2px solid #ea0245;
+
     color: #ea0245;
+
     width: 100%;
+
     height: 35px;
+
     padding: 5px;
+
     border-radius: 10px;
+
     margin-top: 10px;
-        transition: 0.2s ease;
+
 }
-#call:hover
-{
-  letter-spacing: 5px;
-  border:2px solid #0c74fd;
-}
+
 #ambulance
+
 {
+
     height: 500px;
+
 }
+
 #patient
+
 {
+
   height: 400px;
+
 }
+
 .sky {
+
   position: relative;
+
   top: 150px;
+
   width: 100%;
+
   height: 200px;
+
   overflow: hidden;
+
 }
+
+
 
 .cloud {
 
+
+
   position: absolute;
+
   bottom: 60%;
+
   opacity: 0.9;
+
   animation: moveClouds 5s linear infinite;
+
 }
+
+
 
 .cloud1, .cloud2 {
+
   width: 180px;
+
   top: 20px;
+
     opacity: 0;
+
 }
+
+
 
 .cloud1 {
+
   animation-delay: 0s;
+
 }
 
+
+
 .cloud2 {
+
   animation-delay: 2.5s; /* half of animation duration */
+
 }
+
+
+
 
 
 /* Animation keyframes */
+
 @keyframes moveClouds {
+
   0% {
+
     transform: translateX(100vw);
+
     opacity: 0;
+
   }
-  10% 
+
+  10%
+
   {
+
     opacity: 1;
+
   }
+
   80%
+
   {
+
     opacity: 1;
+
   }
+
   90%
+
   {
+
     opacity: 0;
+
   }
+
   100% {
+
     transform: translateX(-200px);
+
     opacity: 0;
+
   }
+
 }
+
+
 
 .second
+
 {
+
     width: 100%;
+
     height: max-content;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content:start ;
+
     align-items: center;
+
 }
+
 .services
+
 {
+
   margin-top: 20px;
-  width: 95%;
+
+  width: 100%;
+
 display: flex;
+
 flex-wrap: wrap;
+
 justify-content: center;
+
 align-items: center;
+
 gap: 30px;
+
 }
+
 .serviceBox
+
 {
+
   text-align: center;
+
   width: 300px;
+
   background: #e8f1fa;
+
   height: 300px;
+
 border-radius: 10px;
+
 display: flex;
+
 justify-content: center;
+
 align-items: center;
+
 flex-direction: column;
+
 padding: 10PX;
+
 }
+
 .second h2
+
 {
+
         margin-top: 20px;
+
     width: 100%;
+
     text-align: center;
+
     font-size: 40px;
+
     color: rgba(0, 0, 0, 0.644);
+
 }
+
 .details
+
 {
+
     margin-top: 20px;
+
     width: 100%;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     flex-direction: row;
+
 }
-.same 
+
+.same
+
 {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 5px;
+
     margin: 5px;
+
 }
 
-.second h1
+
+
+.second h2
+
 {
+
   margin-top: 25px;
+
   font-size: 50px;
+
   color: rgba(0, 0, 0, 0.637);
+
 }
+
 .imgcont
+
 {
+
   flex-wrap: wrap;
+
   margin-top: 20px;
+
   width: 90%;
+
 display: flex;
+
 justify-content:space-evenly;
+
 align-items: center;
+
 }
+
 .imgcont img
+
 {
+
   height: 250px;
+
   width: 400px;
+
   max-width: 95%;
+
     border-radius: 20px;
+
     object-fit: cover;
-    padding: 10px; 
-}
-/* //////////////////////////////////////////////// */
-/* --- Footer --- */
-/* //////////////////////////////////////////////// */
 
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0; /* Adds 25px of space top and bottom */
-    margin-top: 50px; /* Adds space above the footer */
-    background-color: #f8f8f8; /* A very light grey background */
-    color: #888; /* A soft grey text color */
-    font-size: 14px;
-    border-top: 1px solid #eee; /* A subtle top border */
-}
+    padding: 10px;
 
-footer a {
-    color: #0cc8fd; /* Uses your site's theme color */
-    text-decoration: none;
 }
+    .simple-credit-footer {
+        /* This CSS makes the footer sit at the bottom of the page content */
+        position: absolute;
+bottom: 0;
+width: 100%;
+        background-color: #f9f9f9; /* Light, non-disturbing background */
+        border-top: 1px solid #eee; /* Subtle top border */
+        padding: 8px 0; /* Small amount of padding */
+        text-align: center;
+        font-size: 0.75rem; /* Small font size */
+        color: #777; /* Grey text color */
+        font-family: Arial, sans-serif;
+        margin-top: 2rem; /* Adds some space between your content and the footer */
+    }
 
-footer a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
-}
-@media (max-width: 863px) 
+    .simple-credit-footer a {
+        color: #555; /* Slightly darker link for readability */
+        text-decoration: none;
+    }
+
+    .simple-credit-footer a:hover {
+        text-decoration: underline; /* Underline on hover for clarity */
+    }
+@media (max-width: 863px)
+
 {
+
  .first
+
  {
+
   flex-direction: column-reverse;
+
   height: max-content;
+
   align-items: center;
+
   justify-content: center;
+
  }
+
  .first .right
+
  {
+
   width: 100%;
+
 height: 40vh;
+
  }
- .first .left 
+
+ .first .left
+
  {
+
   margin: 0;
+
 width: 80%;
+
 padding: 20px;
+
  }
+
  #ambulance
+
  {
+
   max-width: 90%;
+
   height: 400px;
+
  }
+
  .sky
+
  {
+
   width: 100%;
+
  }
+
  .details
+
  {
+
   width: 100%;
+
   flex-wrap: wrap;
+
  }
+
  .same
+
  {
+
   max-width: 30%;
+
  }
+
  .same img
+
  {
+
   max-width: 50%;
+
  }
+
  #book,#call
+
  {
+
    margin-top: 10px;
-   ma
+
  }
+
+
 
  .left h3
+
  {
+
   margin-top: 10px;
+
  }
+
 .second h1
+
 {
+
   font-size: 30px;
-}
-}
-@media (max-width: 500px)
-{
-.left h1
-{
-  font-size: 25px;
-}
-.sky
-{
-  display: none;
-}
-.first .right 
-{
-  height: 40svh;
-}
-nav 
-{
-  display: none;
-}
-.left h3
-{
-  display: none;
-}
-.details
-{
-  justify-content: space-around;
-  align-items: center;
-}
-.second h1
-{
-  font-size: 25px;
+
 }
 
-.second h2
-{
-  font-size: 25px;
 }
+
+@media (max-width: 500px)
+
+{
+
+.left h1
+
+{
+
+  font-size: 25px;
+
+}
+
+.sky
+
+{
+
+  display: none;
+
+}
+
+.first .right
+
+{
+
+  height: 40svh;
+
+}
+
+nav
+
+{
+
+  display: none;
+
+}
+
+.left h3
+
+{
+
+  display: none;
+
+}
+
+.details
+
+{
+
+  justify-content: space-around;
+
+  align-items: center;
+
+}
+
+.second h1
+
+{
+
+  font-size: 25px;
+
+}
+
+
+
+.second h2
+
+{
+
+  font-size: 25px;
+
+}
+
 }
