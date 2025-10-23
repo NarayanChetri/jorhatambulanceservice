@@ -31,6 +31,10 @@ nav a {
     margin: 0px 30px; /* Space between nav items */
     font-weight: 500;
     transition: 0.2s ease;
+    background: purple;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
 }
 
 nav a:hover {
@@ -58,10 +62,6 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     margin-right: 100px;
-}
-
-.left h3 {
-    color: #fe3131; /* Red highlight color */
 }
 
 .left h5 {
@@ -97,8 +97,25 @@ nav a:hover {
     margin-top: 10px;
     transition: 0.2s ease;
 }
-
+#book2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #ea0245;
+    color: white;
+    width: 300px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.2s ease;
+}
 #book:hover {
+    letter-spacing: 5px; /* Cool hover effect */
+    background: purple;
+}
+#book2:hover {
     letter-spacing: 5px; /* Cool hover effect */
     background: purple;
 }
@@ -324,7 +341,7 @@ footer a {
 
     .first .left {
         margin: 0;
-        width: 80%; /* Uses percentage width instead of fixed */
+        width: 87%; /* Uses percentage width instead of fixed */
         padding: 20px;
     }
 
@@ -355,9 +372,6 @@ footer a {
         margin-top: 10px;
     }
 
-    .left h3 {
-        margin-top: 10px;
-    }
 
 .second h1
 
@@ -381,12 +395,63 @@ footer a {
 
 }
 
-.sky
+.sky {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 150px;
+    overflow: hidden; /* Hides clouds as they move out of the box */
+    z-index: 1;
+}
 
-{
+.cloud {
+    position: absolute;
+    bottom: 60%;
+    opacity: 0.5;
+}
 
-  display: none;
+.cloud1 {
+    width: 180px;
+    top: 0px;
+    opacity: 0;
+    animation: moveClouds 4s linear infinite;
+}
 
+.cloud2 {
+    width: 140px;
+    top: 50px;
+    opacity: 0;
+    animation: moveClouds 4s linear infinite;
+}
+
+/* Staggering the cloud animations */
+.cloud1 {
+    animation-delay: 0s;
+}
+
+.cloud2 {
+    animation-delay: 2.5s; /* half of animation duration */
+}
+
+/* Keyframe animation for moving clouds */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.4; /* Fade in */
+    }
+    80% {
+        opacity: 0.4; /* Stay visible */
+    }
+    90% {
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        transform: translateX(-200px); /* End off-screen to the left */
+        opacity: 0;
+    }
 }
 
 .first .right
@@ -398,14 +463,6 @@ footer a {
 }
 
 nav
-
-{
-
-  display: none;
-
-}
-
-.left h3
 
 {
 
@@ -430,9 +487,19 @@ nav
   font-size: 25px;
 
 }
+.left h1
 
+{
 
+  font-size: 22px;
 
+}
+
+.left h5
+{
+    margin: 0;
+font-weight: 400;
+}
 .second h2
 
 {
@@ -448,5 +515,10 @@ nav
 
     height: 160px;
 
+ }
+ footer
+ {
+    flex-direction: column;
+    padding-bottom: 10px;
  }
 }
