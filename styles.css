@@ -353,75 +353,94 @@ nav a:hover {
         margin-top: 10px;
     }
 
-    .second h1 {
-        font-size: 30px;
-    }
+.second h1
+
+{
+
+  font-size: 30px;
+
 }
 
-/* 6b. Mobile View (max-width: 500px) */
-@media (max-width: 500px) {
-    .left h1 {
-        font-size: 25px;
-    }
+}
 
-    /* Cloud animation adjustments for mobile */
-    .sky {
-        position: relative;
-        top: 25px;
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-        z-index: 1;
-    }
+@media (max-width: 500px)
 
-    .cloud {
-        position: absolute;
-        bottom: 60%;
-        opacity: 0.5;
-    }
+{
 
-    .cloud1 {
-        width: 150px;
-        top: 0px;
-        opacity: 0;
-        animation: moveClouds 5s linear infinite;
-    }
+.left h1
 
-    .cloud2 {
-        width: 140px;
-        top: 50px;
-        opacity: 0;
-        animation: moveClouds 3s linear infinite;
-    }
+{
 
-    .cloud1 {
-        animation-delay: 0s;
-    }
+  font-size: 25px;
 
-    .cloud2 {
-        animation-delay: 2.5s;
-    }
-    .first .right {
-        height: 40svh;
-    }
+}
 
-    /* Hiding the nav on mobile is BAD for user experience. */
-    /* You should implement a "hamburger" menu instead. */
-    nav {
-        display: none;
-    }
+.sky
 
-    .left h3 {
-        display: none; /* Hides "For the people of jorhat" on mobile */
-    }
+{
 
-    .details {
-        justify-content: space-around;
-        align-items: center;
-    }
+  display: none;
 
-    .second h1,
-    .second h2 {
-        font-size: 25px; /* Smaller headings for mobile */
-    }
+}
+
+.first .right
+
+{
+
+  height: 40svh;
+
+}
+
+nav
+
+{
+
+  display: none;
+
+}
+
+.left h3
+
+{
+
+  display: none;
+
+}
+
+.details
+
+{
+
+  justify-content: space-around;
+
+  align-items: center;
+
+}
+
+.second h1
+
+{
+
+  font-size: 25px;
+
+}
+
+
+
+.second h2
+
+{
+
+  font-size: 25px;
+
+}
+#ambulance
+
+ {
+
+  max-width: 80%;
+
+    height: 200px;
+
+ }
 }
