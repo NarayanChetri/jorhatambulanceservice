@@ -709,5 +709,13 @@ nav
   font-size: 25px;
 
 }
+#ambulance
 
+ {
+
+  max-width: 80%;
+
+    height: 200px;
+
+ }
 }
