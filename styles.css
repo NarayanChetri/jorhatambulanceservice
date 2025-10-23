@@ -1,713 +1,427 @@
-*
-
-{
-
+/* ======================================== */
+/* 1. Global Resets & Body */
+/* ======================================== */
+* {
     margin: 0;
-
     padding: 0;
-
-   font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-   
-
+    /* Sets a clean, modern default font for the whole site */
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-
-body
-
-{
-position: relative;
+body {
+    position: relative; /* Needed for the absolute positioned footer */
     background: #ffff;
-
-    min-height: 200svh;
-
+    /* min-height: 200svh; */ /* This is unusual. 100svh is full height. Content will push this anyway. */
+    /* Consider removing min-height or setting to 100svh if you want a guaranteed full-screen hero. */
 }
 
-nav
-
-{
-
+/* ======================================== */
+/* 2. Navigation Bar */
+/* ======================================== */
+nav {
     display: flex;
-
     flex-direction: row;
-
-    justify-content: right;
-
+    justify-content: right; /* Aligns nav items to the right */
     padding: 10px;
-
     align-items: center;
-
-
-
-}
-nav a 
-{
-  text-decoration: none;
-  margin: 0px 30px;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-nav a:hover
-{
-  color: red;
 }
 
+nav a {
+    text-decoration: none;
+    margin: 0px 30px; /* Space between nav items */
+    font-weight: 500;
+    transition: 0.2s ease;
+}
 
-.first
+nav a:hover {
+    color: red;
+}
 
-{
-
-    height: 70svh;
-
+/* ======================================== */
+/* 3. Hero Section (First) */
+/* ======================================== */
+.first {
+    height: 70svh; /* 70% of the screen's smallest viewport height */
     display: flex;
-
-    justify-content:right;
-
+    justify-content: right;
     align-items: center;
-
-     
-
 }
 
-.first .left
-
-{
-
-     
-
+/* 3a. Hero Section - Left (Content) */
+.first .left {
     text-align: center;
-
     height: 80%;
-
-    width: 400px;
-
+    width: 400px; /* Fixed width, might be tricky for responsiveness */
     padding: 20px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
-   margin-right: 100px;
-
-
-
-
-
+    margin-right: 100px;
 }
 
-.left h3
-
-{
-
-    color: #fe3131;
-
+.left h3 {
+    color: #fe3131; /* Red highlight color */
 }
 
-
-
-.left h5
-
-{
-
+.left h5 {
     margin-top: 10px;
-
     color: #707082;
-
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 17px;
-
     width: 100%;
-
 }
 
-.first .right
-
-{
-
+/* 3b. Hero Section - Right (Animation) */
+.first .right {
     height: 100%;
-
     width: 50%;
-
     display: flex;
-
     flex-direction: column;
-
-    justify-content:center;
-
+    justify-content: center;
     align-items: center;
-
-
-
 }
 
-
-
-#book
-
-{
-
+/* 3c. Call-to-Action Buttons (Book & Call) */
+#book {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-decoration: none;
-
     background: #ea0245;
-
     color: white;
-
     width: 100%;
-
     height: 35px;
-
     padding: 5px;
-
     border-radius: 10px;
-
     margin-top: 10px;
-transition: 0.2s ease;
+    transition: 0.2s ease;
 }
-#book:hover
-{
-  letter-spacing: 5px;
-  background: purple;
-}
-#call
 
-{
-transition: 0.2s ease;
+#book:hover {
+    letter-spacing: 5px; /* Cool hover effect */
+    background: purple;
+}
+
+#call {
+    transition: 0.2s ease;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-decoration: none;
-
     border: 2px solid #ea0245;
-
     color: #ea0245;
-
     width: 100%;
-
     height: 35px;
-
     padding: 5px;
-
     border-radius: 10px;
-
     margin-top: 10px;
-
 }
-#call:hover
-{
-  letter-spacing: 5px;
-  background: purple;
-  color: white;
+
+#call:hover {
+    letter-spacing: 5px;
+    background: purple;
+    color: white;
 }
-#ambulance
 
-{
-
+/* 3d. Ambulance & Cloud Animation */
+#ambulance {
     height: 250px;
-    transform: scaleX(-1);
-
-}
-
-#patient
-
-{
-
-  height: 400px;
-
+    transform: scaleX(-1); /* Flips the image horizontally */
 }
 
 .sky {
-
-  position: relative;
-
-  top: 50px;
-
-  width: 100%;
-
-  height: 200px;
-
-  overflow: hidden;
-z-index: 1;
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Hides clouds as they move out of the box */
+    z-index: 1;
 }
-
-
 
 .cloud {
-
-
-
-  position: absolute;
-
-  bottom: 60%;
-
-  opacity: 0.5;
-
-  animation: moveClouds 5s linear infinite;
-
+    position: absolute;
+    bottom: 60%;
+    opacity: 0.5;
 }
-
-
-
-.cloud1, .cloud2 {
-
-  width: 180px;
-
-  top: 20px;
-
-    opacity: 0;
-
-}
-
-
 
 .cloud1 {
-
-  animation-delay: 0s;
-
+    width: 180px;
+    top: 0px;
+    opacity: 0;
+    animation: moveClouds 5s linear infinite;
 }
-
-
 
 .cloud2 {
-
-  animation-delay: 2.5s; /* half of animation duration */
-
+    width: 140px;
+    top: 70px;
+    opacity: 0;
+    animation: moveClouds 3s linear infinite;
 }
 
+/* Staggering the cloud animations */
+.cloud1 {
+    animation-delay: 0s;
+}
 
+.cloud2 {
+    animation-delay: 2.5s; /* half of animation duration */
+}
 
-
-
-/* Animation keyframes */
-
+/* Keyframe animation for moving clouds */
 @keyframes moveClouds {
-
-  0% {
-
-    transform: translateX(100vw);
-
-    opacity: 0;
-
-  }
-
-  10%
-
-  {
-
-    opacity: 0.7;
-
-  }
-
-  80%
-
-  {
-
-    opacity: 0.7;
-
-  }
-
-  90%
-
-  {
-
-    opacity: 0;
-
-  }
-
-  100% {
-
-    transform: translateX(-200px);
-
-    opacity: 0;
-
-  }
-
+    0% {
+        transform: translateX(100vw); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7; /* Fade in */
+    }
+    80% {
+        opacity: 0.7; /* Stay visible */
+    }
+    90% {
+        opacity: 0; /* Fade out */
+    }
+    100% {
+        transform: translateX(-200px); /* End off-screen to the left */
+        opacity: 0;
+    }
 }
 
-
-
-.second
-
-{
-
+/* ======================================== */
+/* 4. Main Content (Second Section) */
+/* ======================================== */
+.second {
     width: 100%;
-
-    height: max-content;
-
+    height: max-content; /* Expands to fit content */
     display: flex;
-
     flex-direction: column;
-
-    justify-content:start ;
-
+    justify-content: start;
     align-items: center;
-
 }
 
-.services
-
-{
-
-  margin-top: 20px;
-
-  width: 100%;
-
-display: flex;
-
-flex-wrap: wrap;
-
-justify-content: center;
-
-align-items: center;
-
-gap: 30px;
-
-}
-
-.serviceBox
-
-{
-
-  text-align: center;
-
-  width: 300px;
-
-  background: #e8f1fa;
-
-  height: 300px;
-
-border-radius: 10px;
-
-display: flex;
-
-justify-content: center;
-
-align-items: center;
-
-flex-direction: column;
-
-padding: 10PX;
-
-}
-
-.second h2
-
-{
-
-        margin-top: 20px;
-
-    width: 100%;
-
-    text-align: center;
-
-    font-size: 40px;
-
-    color: rgba(0, 0, 0, 0.644);
-
-}
-
-.details
-
-{
-
+/* 4a. "Our Services" Boxes */
+.services {
     margin-top: 20px;
-
     width: 100%;
-
     display: flex;
-
+    flex-wrap: wrap; /* Allows boxes to stack on smaller screens */
     justify-content: center;
-
     align-items: center;
+    gap: 30px; /* Space between service boxes */
+}
 
+.serviceBox {
+    text-align: center;
+    width: 300px;
+    background: #e8f1fa; /* Light blue background */
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10PX;
+}
+
+/* 4b. Section Headings (h2) */
+.second h2 {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.644);
+}
+
+/* 4c. "Why Choose Us" Details */
+.details {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-
 }
 
-.same
-
-{
-
+.same {
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     padding: 5px;
-
     margin: 5px;
-
 }
 
-
-
-.second h2
-
-{
-
-  margin-top: 25px;
-
-  font-size: 50px;
-
-  color: rgba(0, 0, 0, 0.637);
-
+/* 4d. "Experience" Image Gallery */
+.imgcont {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.imgcont
-
-{
-
-  flex-wrap: wrap;
-
-  margin-top: 20px;
-
-  width: 90%;
-
-display: flex;
-
-justify-content:space-evenly;
-
-align-items: center;
-
-}
-
-.imgcont img
-
-{
-
-  height: 250px;
-
-  width: 400px;
-
-  max-width: 95%;
-
-    border-radius: 20px;
-
-    object-fit: cover;
-
-    padding: 10px;
-
-}
-    .simple-credit-footer {
-        /* This CSS makes the footer sit at the bottom of the page content */
-        position: absolute;
-bottom: 0;
-width: 100%;
-        background-color: #f9f9f9; /* Light, non-disturbing background */
-        border-top: 1px solid #eee; /* Subtle top border */
-        padding: 8px 0; /* Small amount of padding */
-        text-align: center;
-        font-size: 0.75rem; /* Small font size */
-        color: #777; /* Grey text color */
-        font-family: Arial, sans-serif;
-        margin-top: 2rem; /* Adds some space between your content and the footer */
-    }
-
-    .simple-credit-footer a {
-        color: #555; /* Slightly darker link for readability */
-        text-decoration: none;
-    }
-
-    .simple-credit-footer a:hover {
-        text-decoration: underline; /* Underline on hover for clarity */
-    }
-@media (max-width: 863px)
-
-{
-
- .first
-
- {
-
-  flex-direction: column-reverse;
-
-  height: max-content;
-
-  align-items: center;
-
-  justify-content: center;
-
- }
-
- .first .right
-
- {
-
-  width: 100%;
-
-height: 40vh;
-
- }
-
- .first .left
-
- {
-
-  margin: 0;
-
-width: 80%;
-
-padding: 20px;
-
- }
-
- #ambulance
-
- {
-
-  max-width: 90%;
-
+.imgcont img {
     height: 250px;
-
- }
-
- .sky
-
- {
-
-  width: 100%;
-
- }
-
- .details
-
- {
-
-  width: 100%;
-
-  flex-wrap: wrap;
-
- }
-
- .same
-
- {
-
-  max-width: 30%;
-
- }
-
- .same img
-
- {
-
-  max-width: 50%;
-
- }
-
- #book,#call
-
- {
-
-   margin-top: 10px;
-
- }
-
-
-
- .left h3
-
- {
-
-  margin-top: 10px;
-
- }
-
-.second h1
-
-{
-
-  font-size: 30px;
-
+    width: 400px;
+    max-width: 95%;
+    border-radius: 20px;
+    object-fit: cover; /* Ensures images fill the space without stretching */
+    padding: 10px;
 }
 
+/* ======================================== */
+/* 5. Footer */
+/* ======================================== */
+.simple-credit-footer {
+   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #777;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
 }
 
-@media (max-width: 500px)
-
-{
-
-.left h1
-
-{
-
-  font-size: 25px;
-
+.simple-credit-footer a {
+    color: #555;
+    text-decoration: none;
 }
 
-.sky
-
-{
-
-  display: none;
-
+.simple-credit-footer a:hover {
+    text-decoration: underline;
 }
 
-.first .right
+/* ======================================== */
+/* 6. Media Queries (Responsiveness) */
+/* ======================================== */
 
-{
+/* 6a. Tablet View (max-width: 863px) */
+@media (max-width: 863px) {
+    .first {
+        flex-direction: column-reverse; /* Stacks image on top of text */
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+    }
 
-  height: 40svh;
+    .first .right {
+        width: 100%;
+        height: 40vh;
+    }
 
+    .first .left {
+        margin: 0;
+        width: 80%; /* Uses percentage width instead of fixed */
+        padding: 20px;
+    }
+
+    #ambulance {
+        max-width: 90%;
+        height: 150px; /* Smaller ambulance */
+    }
+
+    .sky {
+        width: 100%;
+    }
+
+    .details {
+        width: 100%;
+        flex-wrap: wrap; /* Allows "Why Choose Us" items to stack */
+    }
+
+    .same {
+        max-width: 30%;
+    }
+
+    .same img {
+        max-width: 50%;
+    }
+
+    #book,
+    #call {
+        margin-top: 10px;
+    }
+
+    .left h3 {
+        margin-top: 10px;
+    }
+
+    .second h1 {
+        font-size: 30px;
+    }
 }
 
-nav
+/* 6b. Mobile View (max-width: 500px) */
+@media (max-width: 500px) {
+    .left h1 {
+        font-size: 25px;
+    }
 
-{
+    /* Cloud animation adjustments for mobile */
+    .sky {
+        position: relative;
+        top: 25px;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        z-index: 1;
+    }
 
-  display: none;
+    .cloud {
+        position: absolute;
+        bottom: 60%;
+        opacity: 0.5;
+    }
 
-}
+    .cloud1 {
+        width: 150px;
+        top: 0px;
+        opacity: 0;
+        animation: moveClouds 5s linear infinite;
+    }
 
-.left h3
+    .cloud2 {
+        width: 140px;
+        top: 50px;
+        opacity: 0;
+        animation: moveClouds 3s linear infinite;
+    }
 
-{
+    .cloud1 {
+        animation-delay: 0s;
+    }
 
-  display: none;
+    .cloud2 {
+        animation-delay: 2.5s;
+    }
+    .first .right {
+        height: 40svh;
+    }
 
-}
+    /* Hiding the nav on mobile is BAD for user experience. */
+    /* You should implement a "hamburger" menu instead. */
+    nav {
+        display: none;
+    }
 
-.details
+    .left h3 {
+        display: none; /* Hides "For the people of jorhat" on mobile */
+    }
 
-{
+    .details {
+        justify-content: space-around;
+        align-items: center;
+    }
 
-  justify-content: space-around;
-
-  align-items: center;
-
-}
-
-.second h1
-
-{
-
-  font-size: 25px;
-
-}
-
-
-
-.second h2
-
-{
-
-  font-size: 25px;
-
-}
-
+    .second h1,
+    .second h2 {
+        font-size: 25px; /* Smaller headings for mobile */
+    }
 }
